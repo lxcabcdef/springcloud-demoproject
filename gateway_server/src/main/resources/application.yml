@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: gateway-server
+
+  cloud:
+    config:
+      uri: http://localhost:9000
+      profile: dev
+      label: main
+
+  config:
+    import: "optional:configserver:"
+  main:
+    web-application-type: reactive
